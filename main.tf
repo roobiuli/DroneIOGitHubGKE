@@ -16,7 +16,7 @@ resource "google_container_cluster" "DroneIOCluster" {
 
 resource "google_container_node_pool" "primary" {
   name       = "${google_container_cluster.DroneIOCluster.name}-node-pool"
-  location   = "${var.Zone}"
+  zone   = "${var.Zone}"
   cluster    = "${google_container_cluster.DroneIOCluster.name}"
   node_count = 1
 
