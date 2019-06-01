@@ -15,7 +15,7 @@ provider "kubernetes" {
 
 resource "kubernetes_deployment" "DroneIOServer" {
   metadata {
-     name = "DroneServer"
+     name = "droneserver"
      labels {
        app = "DroneServer"
      }
@@ -102,7 +102,7 @@ resource "kubernetes_deployment" "DroneIOServer" {
 
  resource "kubernetes_service" "DroneIOServer" {
   metadata {
-    name = "DroneServer"
+    name = "droneserver"
     labels {
       app  = "DroneServer"
     }
