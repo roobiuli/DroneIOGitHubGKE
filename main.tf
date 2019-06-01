@@ -1,6 +1,6 @@
 resource "google_container_cluster" "DroneIOCluster" {
   name     = "${var.ClusterName}"
-  location = "${var.Zone}"
+  zone = "${var.Zone}"
   remove_default_node_pool = true
   initial_node_count = 1
 
