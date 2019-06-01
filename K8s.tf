@@ -1,5 +1,5 @@
 provider "kubernetes" {
-    host = "${}"
+    host = "${google_container_cluster.DroneIOCluster.endpoint}"
     username = "${var.GkeUsername}"
     password = "${var.GkePassword}"
 
